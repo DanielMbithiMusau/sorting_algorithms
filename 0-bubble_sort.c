@@ -19,14 +19,14 @@ void bubble_sort(int *array, size_t size)
 	while (swapping == true)
 	{
 		swapping = false;
-		
+
 		for (i = 0; i < size; i++)
 		{
-			if (i > 0 && array[i-1] > array[i])
+			if (i > 0 && array[i - 1] > array[i])
 			{
 				temp = array[i];
-				array[i] = array[i-1];
-				array[i-1] = temp;
+				array[i] = array[i - 1];
+				array[i - 1] = temp;
 				swapping = true;
 			}
 		}
