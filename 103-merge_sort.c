@@ -28,7 +28,33 @@ void merge(int *array, int left, int mid, int right)
 	i = 0;
 	j = 0;
 	k = left;
+
+	printf("Merging...\n");
+	printf("[left]: ");
 	
+	for (i = 0; i < n1; i++)
+	{
+		if (i > 0)
+			printf(", ");
+		printf("%d", lefthalf[i]);
+	}
+	printf("\n");
+
+	printf("[right]: ");
+
+	for (j = 0; j < n2; j++)
+	{
+		if (j > 0)
+			printf(", ");
+		printf("%d", righthalf[j]);
+	}
+	printf("\n");
+
+	i = 0;
+	j = 0;
+	k = left;
+
+
 	while (i < n1 && j < n2)
 	{
 		if (lefthalf[i] <= righthalf[j])
@@ -57,6 +83,17 @@ void merge(int *array, int left, int mid, int right)
 		j++;
 		k++;
 	}
+
+	printf("[Done]: ");
+
+	for (i = left; i <= right; i++)
+	{
+		if (i > left)
+			printf(", ");
+		printf("%d", array[i]);
+	}
+	printf("\n");
+
 
 	free(lefthalf);
 	free(righthalf);
