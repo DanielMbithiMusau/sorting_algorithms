@@ -13,8 +13,8 @@ void merge(int *array, int left, int mid, int right)
 
 	n1 = mid - left + 1;
 	n2 = right - mid;
-	lefthalf = (int*) malloc(n1 * sizeof(int));
-	righthalf = (int*) malloc(n2 * sizeof(int));
+	lefthalf = (int *) malloc(n1 * sizeof(int));
+	righthalf = (int *) malloc(n2 * sizeof(int));
 
 	for (i = 0; i < n1; i++)
 	{
@@ -22,7 +22,7 @@ void merge(int *array, int left, int mid, int right)
 	}
 	for (j = 0; j < n2; j++)
 	{
-		righthalf[j] = array[mid + 1+ j];
+		righthalf[j] = array[mid + 1 + j];
 	}
 
 	i = 0;
@@ -31,7 +31,7 @@ void merge(int *array, int left, int mid, int right)
 
 	printf("Merging...\n");
 	printf("[left]: ");
-	
+
 	for (i = 0; i < n1; i++)
 	{
 		if (i > 0)
